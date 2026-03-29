@@ -94,12 +94,16 @@ Component({
     },
     back() {
       const data = this.data
+      console.log('back', data)
+      const debugpages = getCurrentPages()
+      console.log('debugpages', debugpages)
       if (data.delta) {
-        wx.navigateBack({
-          delta: data.delta
-        })
+        wx.navigateBack()
+        // wx.navigateBack({
+        //   delta: data.delta
+        // })
       }
-      this.triggerEvent('back', { delta: data.delta }, {})
+      //this.triggerEvent('back', { delta: data.delta }, {})
     }
   },
 })

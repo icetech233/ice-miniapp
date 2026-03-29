@@ -1,5 +1,5 @@
-<!--index.wxml-->
-<navigation-bar title="Weixin" back="{{false}}" color="black" homeButton="true" background="#FFF"></navigation-bar>
+
+<navigation-bar title="Weixin" back="{{true}}" color="black" homeButton="true" background="#FFF"></navigation-bar>
 <scroll-view class="scrollarea" scroll-y type="list">
   <view class="container">
     <view class="userinfo">
@@ -22,7 +22,6 @@
       </block>
     </view>
     <view class="usermotto">
-      <text class="user-motto">{{motto}}</text>
       <van-button type="primary">{{motto}}</van-button>
     </view>
   </view>
