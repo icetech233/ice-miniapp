@@ -1,0 +1,14 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationStyle": "custom"
+  },
+  "useExtendedLib": {
+    "weui":true
+  },
+  "sitemapLocation": "sitemap.json"
+}
