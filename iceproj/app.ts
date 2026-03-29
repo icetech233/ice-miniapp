@@ -1,4 +1,10 @@
 // app.ts
+interface LoginResponse {
+  openid: string;
+  session_key: string;
+  // 可以根据实际返回结果添加更多字段
+}
+
 App<IAppOption>({
   globalData: {},
   onLaunch() {
@@ -14,7 +20,7 @@ App<IAppOption>({
         // console.log(res.code)
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
         const baseHost = "http://127.0.0.1:8080"
-        wx.request({
+        wx.request<LoginResponse>({
           url: baseHost + '/api/v1/wx/login', // 替换为你的后端接口
           method: 'POST',
           data: {
