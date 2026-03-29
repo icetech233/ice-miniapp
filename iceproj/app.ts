@@ -1,7 +1,12 @@
 // app.ts
-interface LoginResponse {
-  openid: string;
-  session_key: string;
+
+export interface LoginData {
+  errcode: number
+  openid: string
+  session_key: string
+}
+export interface LoginResponse {
+  data: LoginData;
   // 可以根据实际返回结果添加更多字段
 }
 
@@ -17,7 +22,6 @@ App<IAppOption>({
     wx.login({
       success: res => {
         console.log("登陆", res)
-        // console.log(res.code)
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
         const baseHost = "http://127.0.0.1:8080"
         wx.request<LoginResponse>({
@@ -27,17 +31,13 @@ App<IAppOption>({
             code: res.code,
           },
           success: (res) => {
-            // 
-            if (res.data ) {
+            const { data } = res.data 
+            if (data && data.errcode === 0) {
+              console.log("登陆 res.data", data )
+              console.log("登陆 openid",  data.openid)
+              console.log("登陆 session_key",  data.session_key)
+              wx.setStorageSync<LoginData>('logresp', data)
 
-              console.log("登陆 res.data ", res.data )
-              console.log("登陆 openid", res.data.openid )
-              console.log("登陆 session_key", res.data.session_key )
- 
-              // 登录成功，保存 token 或用户信息
-              // wx.setStorageSync('token', res.data.token);
-              // wx.setStorageSync('user', res.data.user);
-    
               // this.setData({
               //   loginStatus: 'success',
               //   loginMessage: '登录成功！即将跳转...'
@@ -56,12 +56,6 @@ App<IAppOption>({
             console.error("网络错误，请检查连接") 
           }
         });
-
-
-
-        //   /api/v1/wx/login
-
-
       },
     })
   },
