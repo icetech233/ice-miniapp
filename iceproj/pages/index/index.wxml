@@ -5,7 +5,7 @@
     <view class="userinfo">
       <block wx:if="{{canIUseNicknameComp && !hasUserInfo}}">
         <button class="avatar-wrapper" open-type="chooseAvatar" bind:chooseavatar="onChooseAvatar">
-          <image class="avatar" src="{{userInfo.avatarUrl}}"></image>
+          <van-image width="100" height="100" fit="fill" src="{{userInfo.avatarUrl}}"></van-image>
         </button>
         <view class="nickname-wrapper">
           <text class="nickname-label">昵称</text>
