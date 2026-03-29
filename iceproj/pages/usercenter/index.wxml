@@ -1,0 +1,11 @@
+<navigation-bar title="查看启动日志" back="{{true}}" color="black" background="#FFF"></navigation-bar>
+<scroll-view class="scrollarea" scroll-y type="list">
+  <view class="nickname-wrapper">
+    <text class="nickname-label">昵称</text>
+    <input type="nickname" class="nickname-input" placeholder="请输入昵称" />
+  </view>
+
+  <view class="nickname-wrapper">
+    <van-button type="primary">你好</van-button>
+  </view>
+</scroll-view>

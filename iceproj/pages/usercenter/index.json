@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "个人中心",
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "van-button": "@vant/weapp/button/index",
+    "navigation-bar": "/components/navigation-bar/navigation-bar"
+  },
+  "enablePullDownRefresh": true
+}

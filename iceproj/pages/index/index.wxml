@@ -23,7 +23,6 @@
     </view>
     <view class="usermotto">
       <text class="user-motto">{{motto}}</text>
-      <mp-icon type="field" icon="add" color="black" size="{{25}}"></mp-icon>
       <van-button type="primary">{{motto}}</van-button>
     </view>
   </view>

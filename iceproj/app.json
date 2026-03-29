@@ -1,14 +1,45 @@
 {
   "pages": [
+    "pages/usercenter/index",
     "pages/index/index",
     "pages/logs/logs"
   ],
+  "tabBar": {
+    "custom": false,
+    "color": "#ff6688",
+    "selectedColor": "#005F15",
+    "backgroundColor": "#ffeef0",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/logs/logs",
+        "text": "日志"
+      },
+      {
+        "pagePath": "pages/usercenter/index",
+        "text": "用户中心"
+      }
+    ]
+  },
   "window": {
     "navigationBarTextStyle": "black",
     "navigationStyle": "custom"
   },
   "useExtendedLib": {
-    "weui":true
+    "weui": true
   },
-  "sitemapLocation": "sitemap.json"
+  "renderer": "skyline",
+  "componentFramework": "glass-easel",
+  "rendererOptions": {
+    "skyline": {
+      "defaultDisplayBlock": true,
+      "defaultContentBox": true,
+      "tagNameStyleIsolation": "isolated",
+      "disableABTest": true,
+      "sdkVersionBegin": "3.0.0",
+      "sdkVersionEnd": "15.255.255"
+    }
+  },
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents"
 }
