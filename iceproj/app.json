@@ -17,6 +17,8 @@
       },
       {
         "pagePath": "pages/usercenter/index",
+        "iconPath": "images/nav/my-off.png",
+        "selectedIconPath": "images/nav/my-on.png",
         "text": "用户中心"
       }
     ]
