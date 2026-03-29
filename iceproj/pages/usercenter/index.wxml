@@ -1,10 +1,104 @@
-<navigation-bar title="用户中心" back="true" color="black" background="#FFF"></navigation-bar>
+<navigation-bar title="我的" back="{{true}}" color="black" background="#FFF"></navigation-bar>
 <scroll-view class="scrollarea" scroll-y type="list">
-  <view class="nickname-wrapper">
-    <text class="nickname-label">昵称</text>
-    <input type="nickname" class="nickname-input" placeholder="请输入昵称" />
+  <view class="header">
+    <view class="login-card">
+      <text class="greeting-text">嗨，古茗的新朋友</text>
+      <view class="login-btn">立即登录</view>
+    </view>
   </view>
-  <view class="nickname-wrapper">
-    <van-button type="primary">你好</van-button>
+
+  <view class="banner-card">
+    <view class="banner-left">
+      <text class="banner-title">流浪补给站</text>
+      <text class="banner-subtitle">走进高校</text>
+      <text class="banner-desc">请猫兑换</text>
+      <text class="banner-desc">可捐赠猫粮哦</text>
+      <view class="banner-btn">立即参与→</view>
+    </view>
+    <view class="banner-right">
+      <image class="cat-img" src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=happy%20orange%20cat%20wearing%20red%20scarf%20in%20little%20house%2C%20cute%20illustration&image_size=square" mode="aspectFill"></image>
+    </view>
   </view>
+
+  <view class="stats-card">
+    <view class="stat-item">
+      <text class="stat-value">**</text>
+      <text class="stat-label">优惠券</text>
+    </view>
+    <view class="divider"></view>
+    <view class="stat-item">
+      <text class="stat-value">**</text>
+      <text class="stat-label">葫芦</text>
+    </view>
+    <view class="divider"></view>
+    <view class="stat-item">
+      <text class="stat-value">**</text>
+      <text class="stat-label">勋章</text>
+    </view>
+    <view class="medal-icons">
+      <image class="medal-icon" src="" mode="aspectFit"></image>
+    </view>
+  </view>
+
+  <view class="features-card">
+    <text class="section-title">我的功能</text>
+    <view class="features-grid">
+      <view class="feature-item">
+        <view class="feature-icon-wrapper">
+          <text class="feature-icon">🎁</text>
+          <view class="dot"></view>
+        </view>
+        <text class="feature-label">福利群</text>
+      </view>
+      <view class="feature-item">
+        <text class="feature-icon">📍</text>
+        <text class="feature-label">地址管理</text>
+      </view>
+      <view class="feature-item">
+        <text class="feature-icon">🎫</text>
+        <text class="feature-label">券码兑换</text>
+      </view>
+      <view class="feature-item">
+        <text class="feature-icon">🎓</text>
+        <text class="feature-label">学子卡</text>
+      </view>
+      <view class="feature-item">
+        <text class="feature-icon">💝</text>
+        <text class="feature-label">送心意</text>
+      </view>
+      <view class="feature-item">
+        <text class="feature-icon">📞</text>
+        <text class="feature-label">联系客服</text>
+      </view>
+      <view class="feature-item">
+        <text class="feature-icon">✉️</text>
+        <text class="feature-label">超值券包</text>
+      </view>
+      <view class="feature-item">
+        <text class="feature-icon">🏆</text>
+        <text class="feature-label">实物中奖记录</text>
+      </view>
+      <view class="feature-item">
+        <text class="feature-icon">⭐</text>
+        <text class="feature-label">口味收藏</text>
+      </view>
+      <view class="feature-item">
+        <text class="feature-icon">📋</text>
+        <text class="feature-label">葫芦兑换记录</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="bottom-cards">
+    <view class="bottom-card">
+      <text class="bottom-card-title">古茗故事</text>
+      <text class="bottom-card-subtitle">Goodme Story</text>
+    </view>
+    <view class="bottom-card">
+      <text class="bottom-card-title">加入古茗</text>
+      <text class="bottom-card-subtitle">成为古茗合作伙伴</text>
+    </view>
+  </view>
+
+  <view class="safe-bottom"></view>
 </scroll-view>
